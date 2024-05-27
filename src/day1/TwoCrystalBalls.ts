@@ -1,6 +1,6 @@
 export default function two_crystal_balls(breaks: boolean[]): number {
     let step = Math.floor(Math.sqrt(breaks.length))
-    let start = 0
+    let start = step
 
     while (start < breaks.length) {
         if (breaks[start]) {
