@@ -1,8 +1,6 @@
 export default class Queue<T> {
     public length: number;
 
-    
-
     constructor() {
     }
 
