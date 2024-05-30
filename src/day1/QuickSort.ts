@@ -17,9 +17,7 @@ function partition(arr: number[], left: number, right: number, pivot: number): n
             right--;
         }
         if (left <= right) {
-            let temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
+            [arr[left], arr[right]] = [arr[right], arr[left]]
             left++;
             right--;
         }
