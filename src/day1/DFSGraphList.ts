@@ -1,4 +1,10 @@
-function walk(graph: WeightedAdjacencyList, source: number, needle: number, visited: boolean[], walkedPath: number[]): number[] | null {
+function walk(
+    graph: WeightedAdjacencyList,
+    source: number,
+    needle: number,
+    visited: boolean[],
+    walkedPath: number[]
+): number[] | null {
     if (source === needle) {
         return walkedPath;
     }
@@ -19,7 +25,11 @@ function walk(graph: WeightedAdjacencyList, source: number, needle: number, visi
     return null;
 }
 
-export default function dfs(graph: WeightedAdjacencyList, source: number, needle: number): number[] | null {
+export default function dfs(
+    graph: WeightedAdjacencyList,
+    source: number,
+    needle: number
+): number[] | null {
     const visited = Array(graph.length).fill(false);
     return walk(graph, source, needle, visited, [source]);
 }
